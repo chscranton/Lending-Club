@@ -1,24 +1,24 @@
 CREATE TABLE state_data(
-	id INTEGER PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	state VARCHAR(20),
 	abbreviation VARCHAR(2),
 	population INTEGER,
-	income_2018 INTEGER,
-	income_2017 INTEGER,
-	income_2016 INTEGER,
-	avg_vantage_score INTEGER,
-	avg_credit_card_balance INTEGER
+	average_income_2018 INTEGER,
+	average_income_2017 INTEGER,
+	average_income_2016 INTEGER,
+	average_vantagescore INTEGER,
+	average_credit_card_balance INTEGER
 );
 
 CREATE TABLE lending_data(
-	id INTEGER PRIMARY KEY,
-	loan_amount INTEGER,
+	id SERIAL PRIMARY KEY,
+	loan_amnt INTEGER,
 	term INTEGER,
 	int_rate DECIMAL,
-	issue_date DATE,
+	issue_d TEXT,
 	purpose TEXT,
 	zip_code VARCHAR(5),
-	address_state VARCHAR(2),
-	annual_income INTEGER,
+	addr_state VARCHAR(2),
+	annual_inc INTEGER,
 	home_ownership TEXT
 );
