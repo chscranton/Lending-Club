@@ -11,14 +11,14 @@ CREATE TABLE state_data(
 );
 
 CREATE TABLE lending_data(
-	id SERIAL PRIMARY KEY,
+	id INTEGER PRIMARY KEY,
 	loan_amnt INTEGER,
 	term INTEGER,
 	int_rate DECIMAL,
-	issue_d TEXT,
+	issue_date TEXT,
 	purpose TEXT,
 	zip_code VARCHAR(5),
-	addr_state VARCHAR(2),
+	state VARCHAR(2),
 	annual_inc INTEGER,
 	home_ownership TEXT
 );
